@@ -2,13 +2,13 @@
 
 An interactive dashboard that answers one question for prospective buyers: **where have resale HDB flats sold within my budget?** Choose a flat type and a budget, and the dashboard shows, town by town, the share of resale sales at or below that budget (November 2025 to October 2026).
 
-![Dashboard screenshot](docs/screenshotzoom.png)
+![Dashboard showing 4 ROOM flats at a $650,000 budget, with towns ranked by share of sales within budget](docs/screenshotzoom.png)
 
 **[Open the live dashboard](https://isoryan.github.io/hdb-resale-price-dashboard/)**, or download `index.html` and open it in any browser. It is a single file with no installation, and it works offline.
 
 ## Audience and purpose
 
-The dashboard is intended for prospective buyers with a fixed budget who are deciding which towns to consider. The aim is to show how available flats are at a given budget, not just what a typical flat costs.
+The dashboard is intended for prospective buyers with a fixed budget who are deciding which towns to consider. The aim is to show how often flats sell at or below a given budget, not just what a typical flat costs.
 
 ## How to use
 
@@ -35,7 +35,9 @@ The figures were checked against independent SQL queries on the same dataset.
 - Per-town counts for the default view (for example Choa Chu Kang: 502 of 516 sales, 97.3%).
 - The "at or below" boundary, using a budget equal to the cheapest sale.
 - Towns with no sales for a flat type (2 ROOM, EXECUTIVE).
-- Edge-case messages with extreme budgets.
+- Figures quoted in this README (for example the 4 ROOM median and Ang Mo Kio's average).
+
+The edge-case messages (empty budget, budget below or above every sale) were tested manually with extreme budgets.
 
 ## Limitations
 
@@ -48,10 +50,10 @@ The figures were checked against independent SQL queries on the same dataset.
 
 Contains information from [Resale flat prices based on registration date from Jan-2017 onwards](https://data.gov.sg/datasets/d_8b84c4ee58e3cfc0ece0d773c8ca6abc/view), accessed on 30 October 2026 from Housing & Development Board (HDB) via data.gov.sg, which is made available under the terms of the [Singapore Open Data Licence version 1.0](https://data.gov.sg/open-data-licence).
 
-## Built with AI assistance
+## AI assistance
 
-Built with assistance from Claude and Antigravity. The question, design decisions, prompts and verification of the numbers were directed by the author, and the AI tools wrote the code under that direction.
+Built with assistance from Claude and Antigravity. The question, design decisions and prompts were the author's own, the AI tools wrote the code under that direction. Numbers were verified independently by the author using SQL.
 
 ## Author
 
-Ryan Tan [ryantan5577@gmail.com]
+Ryan Tan · ryantan5577@gmail.com
